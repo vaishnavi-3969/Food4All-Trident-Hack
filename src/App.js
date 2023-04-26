@@ -4,6 +4,8 @@ import { NavBar } from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Banner } from './components/Banner';
 import { Pastwork } from './components/Pastwork';
+import { Initiatives } from './components/Initiatives';
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
     <NavBar/>
     <Banner/>
     <Pastwork/>
+    <Initiatives/>
     </div>
   );
 }
