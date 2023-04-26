@@ -1,3 +1,43 @@
+/* custom fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+
+/* custom styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.social-icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-icon a {
+  margin: 3px;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background: #282c34;
+  color: #fff !important;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +76,4 @@
     transform: rotate(360deg);
   }
 }
+
