@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Banner } from './components/Banner';
 import { Pastwork } from './components/Pastwork';
 import { Initiatives } from './components/Initiatives';
+import { ContactForm } from './components/ContactForm';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Banner/>
     <Pastwork/>
     <Initiatives/>
+    <ContactForm/>
     </div>
   );
 }
