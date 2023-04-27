@@ -6,6 +6,7 @@ import { Banner } from './components/Banner';
 import { Pastwork } from './components/Pastwork';
 import { Initiatives } from './components/Initiatives';
 import { ContactForm } from './components/ContactForm';
+import { Footer } from './components/Footer';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <Pastwork/>
     <Initiatives/>
     <ContactForm/>
+    <Footer/>
     </div>
   );
 }
