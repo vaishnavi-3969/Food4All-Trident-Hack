@@ -9,6 +9,7 @@ import projImg6 from "../assets/img/Initiatives/8.png";
 import projImg7 from "../assets/img/Initiatives/9.png";
 import projImg8 from "../assets/img/Initiatives/10.png";
 import projImg9 from "../assets/img/Initiatives/11.png";
+import 'animate.css';
 
 
 import TrackVisibility from 'react-on-screen';
