@@ -10,6 +10,7 @@ import projImg7 from "../assets/img/Initiatives/9.png";
 import projImg8 from "../assets/img/Initiatives/10.png";
 import projImg9 from "../assets/img/Initiatives/11.png";
 import 'animate.css';
+import { ArrowRightCircle } from 'react-bootstrap-icons';
 
 
 import TrackVisibility from 'react-on-screen';
@@ -21,7 +22,6 @@ export const Initiatives = () => {
       title: "Volunteer a food drive",
       description: "You can find a comprehensive selection of food drives in your area by browsing through our curated list. Whether you're looking to donate or receive assistance, we've got you covered with a variety of options. Take a moment to explore the various food drives and choose the one that's most convenient for you. Additionally, you can find information on the dates, times, and locations of each food drive to help you plan accordingly.",
       imgUrl: projImg1,
-      link: "https://www.google.com",
     },
     {
       title: "Organize Food Drive",
@@ -104,6 +104,7 @@ export const Initiatives = () => {
                             })
                           }
                         </Row>
+                        <button type="submit"><a href="google.com">Get Involved<ArrowRightCircle size={25}/></a></button>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                         <p>

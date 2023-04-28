@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { NavBar } from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -7,6 +6,7 @@ import { Pastwork } from './components/Pastwork';
 import { Initiatives } from './components/Initiatives';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
     <Initiatives/>
     <ContactForm/>
     <Footer/>
+    <ScrollToTopButton/>
     </div>
   );
 }
