@@ -12,7 +12,7 @@ export const InitiativesCard = ({ title, description, imgUrl }) => {
           {/* <h4>{title}</h4> */}
           <span>{description}</span>
           <br/>
-          <a href="gogo.com"><ArrowRightCircle size={25}/></a>
+          <a href="https://tridentfood4all.netlify.app/"><ArrowRightCircle size={25}/></a>
         </div>
         
       </div>

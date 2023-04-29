@@ -104,7 +104,7 @@ export const Initiatives = () => {
                             })
                           }
                         </Row>
-                        <button type="submit"><a href="google.com">Get Involved<ArrowRightCircle size={25}/></a></button>
+                        <button type="submit"><a href="https://tridentfood4all.netlify.app/">Get Involved<ArrowRightCircle size={25}/></a></button>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                         <p>
