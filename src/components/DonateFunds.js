@@ -70,9 +70,8 @@ const DonateFunds = () => {
       <p>Your donation will help support our cause to provide food to those in need. Thank you for your generosity!</p>
       {donationSuccess && <p className="success-message">Thank you for your donation!</p>}
       {donationError && <p className="error-message">{donationError}</p>}
-      
       <div className="total-donations">
-      <p className="total-donations-text">Total Donations Raised: Rs.{donations.reduce((acc, curr) => acc + Number(curr.donationAmount), 0)}</p>
+      <p className="total-donations-text">Total Donations Raised till date:Rs. {donations.reduce((acc, curr) => acc + Number(curr.donationAmount), 0)}</p>
     </div>
 
       <Form onSubmit={handleSubmit}>
