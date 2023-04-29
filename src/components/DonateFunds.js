@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { useState,useEffect } from 'react';
+import { Form, Button, Table } from 'react-bootstrap';
 import './Donation.css';
 import { getDatabase, ref, push } from "firebase/database";
 import { initializeApp } from "firebase/app";
@@ -12,7 +12,7 @@ const DonateFunds = () => {
   const [location, setLocation] = useState('');
   const [donationSuccess, setDonationSuccess] = useState(false);
   const [donationError, setDonationError] = useState(null);
-
+  
   const firebaseConfig = {
     apiKey: "AIzaSyBcAR9bOUavF6LpUD1NixXMoAOV_R7sqzo",
     authDomain: "food4all-6aadf.firebaseapp.com",
@@ -39,6 +39,7 @@ const DonateFunds = () => {
       };
       await push(donationsRef, newDonation);
       setDonationSuccess(true);
+      alert("Thank you for your donation!")
       setDonationAmount('');
       setName('');
       setEmail('');
@@ -48,7 +49,7 @@ const DonateFunds = () => {
       setDonationError(error.message);
     }
   };
-
+  
   return (
     <div className="donation-container" id='initiative/3.3'>
       <h1>Make a Donation</h1>
@@ -80,6 +81,26 @@ const DonateFunds = () => {
           Donate
         </Button>
       </Form>
+      <Table striped bordered hover variant="dark">
+  <thead>
+    <tr>
+      <th>Donation Amount</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{donationAmount}</td>
+      <td>{name}</td>
+      <td>{email}</td>
+      <td>{phone}</td>
+      <td>{location}</td>
+    </tr>
+  </tbody>
+</Table>
     </div>
   );
 };
