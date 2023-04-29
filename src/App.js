@@ -9,6 +9,7 @@ import { Footer } from './components/Footer';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import { Volunteer } from './components/Volunteer';
 import { OrganizeFoodDrive } from './components/OrganizeFoodDrive';
+import DonateFunds from './components/DonateFunds';
 
 
 function App() {
@@ -20,8 +21,9 @@ function App() {
     <Initiatives/>
     <Volunteer/>
     <OrganizeFoodDrive/>
-    <ContactForm/>
+    <DonateFunds/>
     <Footer/>
+    <ContactForm/>
     <ScrollToTopButton/>
     </div>
   );

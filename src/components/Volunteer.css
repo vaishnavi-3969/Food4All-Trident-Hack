@@ -1,7 +1,8 @@
 .form-container {
     background: url('../assets/img/bg2.png');
-    padding: 20px;
     align-self: center;
+    margin: 0 auto;
+    padding: 100px;
   }
   
 .my-form {
