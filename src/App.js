@@ -10,6 +10,7 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import { Volunteer } from './components/Volunteer';
 import { OrganizeFoodDrive } from './components/OrganizeFoodDrive';
 import DonateFunds from './components/DonateFunds';
+import DonateFoodKits from './components/DonateFoodKits';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <Volunteer/>
     <OrganizeFoodDrive/>
     <DonateFunds/>
+    <DonateFoodKits/>
     <Footer/>
     <ContactForm/>
     <ScrollToTopButton/>

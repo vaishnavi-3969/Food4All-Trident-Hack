@@ -1,9 +1,8 @@
 import { useState,useEffect } from 'react';
 import { Form, Button, Table } from 'react-bootstrap';
 import './Donation.css';
-import { getDatabase, ref, push } from "firebase/database";
+import { getDatabase, ref, push ,onValue} from "firebase/database";
 import { initializeApp } from "firebase/app";
-
 const DonateFunds = () => {
   const [donationAmount, setDonationAmount] = useState('');
   const [name, setName] = useState('');
@@ -25,7 +24,8 @@ const DonateFunds = () => {
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
   const donationsRef = ref(database, 'donations');
-
+  const [donations, setDonations] = useState([]);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -49,7 +49,20 @@ const DonateFunds = () => {
       setDonationError(error.message);
     }
   };
-  
+  useEffect(() => {
+    onValue(donationsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const donationsArray = Object.keys(data).map((key) => {
+          return { id: key, ...data[key] };
+        });
+        setDonations(donationsArray);
+      } else {
+        setDonations([]);
+      }
+    });
+  }, []);
+
   return (
     <div className="donation-container" id='initiative/3.3'>
       <h1>Make a Donation</h1>
@@ -93,12 +106,22 @@ const DonateFunds = () => {
   </thead>
   <tbody>
     <tr>
+    
       <td>{donationAmount}</td>
       <td>{name}</td>
       <td>{email}</td>
       <td>{phone}</td>
       <td>{location}</td>
     </tr>
+    {donations.map((donation) => (
+          <tr key={donation.id}>
+            <td>{donation.donationAmount}</td>
+            <td>{donation.name}</td>
+            <td>{donation.email}</td>
+            <td>{donation.phone}</td>
+            <td>{donation.location}</td>
+          </tr>
+        ))}
   </tbody>
 </Table>
     </div>
