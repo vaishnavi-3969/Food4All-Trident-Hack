@@ -1,5 +1,7 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { useEffect, useState } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+
 import logo from '../assets/img/food4all.svg'
 import './NavBar.css';
 import { FaHome, FaDonate, FaUserFriends } from 'react-icons/fa';
@@ -7,6 +9,7 @@ import { SiNpm } from 'react-icons/si';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'animate.css';
 import './NavBar2.css';
+import LoginButton from './LoginButton';
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
@@ -58,10 +61,12 @@ export const NavBar = () => {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#pastwork" className={activeLink === 'volunteer' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('volunteer')}>
-              <FaUserFriends />Glimpses
+              <FaUserFriends />
+              Glimpses
             </Nav.Link>
             <Nav.Link href="#contact" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>
-              <SiNpm /> Contact
+              <SiNpm /> 
+              Contact
             </Nav.Link>
 
           </Nav>
@@ -78,8 +83,10 @@ export const NavBar = () => {
               <a href='https://www.slack.com'><i className="fa-brands fa-slack"></i></a>
               <a href='https://www.github.com'><i className="fa-brands fa-github"></i></a>
               <a href="tel:123-456-7890"><i className="fa-solid fa-phone"></i></a>
+
             </div>
           </span>
+          <LoginButton/>
         </Navbar.Collapse>
       </Container>
     </Navbar>
